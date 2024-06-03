@@ -1,24 +1,29 @@
-const HomePage = () => {
+"use client";
+import site from "../config/site";
+import Download from "./Download";
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Welcome to My Next.js App
-          </h1>
-        </div>
-      </header>
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-xl text-gray-500">Main Content Area</p>
-            </div>
-          </div>
-        </div>
-      </main>
+    <div className="sm:max-w-7xl max-w-xl h-[35rem] pt-5 mx-auto w-full my-12 px-4">
+      <div className="flex flex-col items-center gap-4">
+        <h1 className="text-4xl items-center text-center font-bold">
+          {site.name}
+        </h1>
+        <p className="font-sans items-center  text-lg font-medium text-center">
+          {site.description}
+        </p>
+      </div>
+      <div className="w-full items-center flex flex-col">
+        <Download />
+        <a
+          className="text-blue-700 text-sm mt-2 block"
+          href="https://github.com/settings/tokens/new"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Create token
+        </a>
+      </div>
     </div>
   );
-};
-
-export default HomePage;
+}
