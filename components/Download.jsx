@@ -13,8 +13,8 @@ const Download = () => {
       name: "url",
       type: "url",
       placeholder:
-        "https://github.com/tailwindlabs/tailwindcss/tree/master/src/css",
-      label: "Directory/File URL",
+        "https://github.com/mdtanvirahamedshanto/gitdown/tree/master/public/logo.png",
+      label: "Repo / Directory / File URL",
       value: "",
       required: true,
     },
